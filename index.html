@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistema Estacionamento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <div class="container pt-5">
+        <div class="card mb-5">
+            <div class="card-header bg-primary text-white">
+                Sistema de Estacionamento
+            </div>
+            <div class="card-body">
+                <form class="text-center">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="modelo" placeholder="digite o modelo">
+                        <label for="modelo">Modelo</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="placa" placeholder="Digite a placa">
+                        <label for="placa">Placa</label>
+                    </div>
+                    <button id="teste" type="submit" class="btn btn-primary mt-3">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-body">
+                <table class="table mt-5 text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col">Modelo</th>
+                            <th scope="col">Placa</th>
+                            <th scope="col">Entrada</th>
+                            <th scope="col">Finalizar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista">
+                        <tr>
+                            <td>Fusca 89</td>
+                            <td>NDF4751</td>
+                            <td>9:42</td>
+                            <td><button onclick="deletar(this.parentNode.parentNode)" class="btn btn-danger"><i class="fa fa-close"></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script2.js"></script>
+</body>
+
+</html>
